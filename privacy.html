@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Приватность — TradeUp Lab</title>
+    <meta name="description" content="Какие данные собирает TradeUp Lab и как работают партнёрские ссылки." />
+    <meta name="theme-color" content="#0b0e13" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <style>
+      .doc {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 56px 0 80px;
+      }
+      .doc h1 {
+        font-size: clamp(28px, 5vw, 42px);
+        margin: 0 0 10px;
+      }
+      .doc h2 {
+        margin: 34px 0 10px;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+      .doc p,
+      .doc li {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .doc ul {
+        padding-left: 18px;
+      }
+      .doc a {
+        color: var(--accent);
+      }
+      .doc .back {
+        display: inline-block;
+        margin-bottom: 28px;
+        font-size: 13px;
+        color: var(--muted-2);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M4 17.5 10.5 4 14 12l2-4 4 9.5H4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M9 20h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-text">TradeUp<span>Lab</span></span>
+        </a>
+      </div>
+    </header>
+
+    <main class="doc">
+      <a class="back" href="./">← На главную</a>
+      <h1>Приватность и данные</h1>
+      <p>Коротко и без юридического тумана: что происходит с вашими данными на этом сайте.</p>
+
+      <h2>Какие данные мы собираем</h2>
+      <p>
+        Сайт не требует регистрации, не просит Steam-логин, API-ключ или платёжные данные.
+        Выбранные скины сохраняются только в адресе страницы — это нужно, чтобы расчётом можно было поделиться.
+      </p>
+      <p>
+        Мы не используем собственные cookie и не создаём профили пользователей. Хостинг — GitHub Pages,
+        который может вести стандартные технические журналы запросов (IP, user-agent) по своей политике.
+      </p>
+
+      <h2>Аналитика и реклама</h2>
+      <p>
+        Сейчас на сайте нет рекламных скриптов и счётчиков. Если в будущем появится аналитика или AdSense,
+        мы обновим эту страницу и, где требуется, добавим баннер согласия.
+      </p>
+
+      <h2>Партнёрские ссылки</h2>
+      <p>
+        Кнопки покупки могут вести на маркетплейсы (например, Waxpeer) с реферальным кодом. Если вы совершите
+        покупку по такой ссылке, мы можем получить комиссию — цена для вас не меняется. Партнёрские ссылки
+        помечены атрибутом <code>rel="sponsored"</code>, а факт их наличия указан в подвале сайта.
+      </p>
+
+      <h2>Сторонние источники</h2>
+      <ul>
+        <li>Метаданные скинов — <a href="https://github.com/ByMykel/CSGO-API" target="_blank" rel="noopener">ByMykel/CSGO-API</a>.</li>
+        <li>Цены — публичный API <a href="https://waxpeer.com/" target="_blank" rel="noopener">Waxpeer</a>.</li>
+        <li>Изображения предметов принадлежат Valve Corporation.</li>
+      </ul>
+
+      <h2>Связь</h2>
+      <p>
+        Вопросы, баги и идеи — через
+        <a href="https://github.com/Kolaars/tradeup-lab/issues" target="_blank" rel="noopener">GitHub Issues</a>.
+      </p>
+
+      <p style="margin-top:34px;font-size:12px;color:var(--muted-2)">
+        TradeUp Lab не связан с Valve Corporation, Steam или Waxpeer. CS2 — торговая марка Valve.
+      </p>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-text">TradeUp<span>Lab</span></span>
+          <p>Бесплатный калькулятор трейд-ап контрактов CS2.</p>
+        </div>
+        <div class="footer-links">
+          <a href="./">Калькулятор</a>
+          <a href="./#deals">Контракты дня</a>
+          <a href="./#faq">FAQ</a>
+        </div>
+        <div class="footer-meta">
+          <p>© <span id="year">2026</span> TradeUp Lab. Не является финансовой рекомендацией.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
