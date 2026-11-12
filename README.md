@@ -43,6 +43,12 @@ node scripts/serve.mjs
 node scripts/build-data.mjs
 ```
 
+Сгенерировать готовый пост «контракт дня» для Telegram:
+
+```bash
+node scripts/deal-post.mjs
+```
+
 Скрипт кеширует метаданные скинов на 6 часов в `.cache/`, цены тянет при каждом запуске.
 
 ## Данные

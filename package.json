@@ -6,6 +6,7 @@
   "description": "CS2 trade-up contract calculator with live Steam prices and daily deals",
   "scripts": {
     "data": "node scripts/build-data.mjs",
+    "post": "node scripts/deal-post.mjs",
     "serve": "node scripts/serve.mjs"
   }
 }
