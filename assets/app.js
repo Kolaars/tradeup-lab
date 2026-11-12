@@ -853,6 +853,13 @@ function bindEvents() {
   $('#cta-share').addEventListener('click', () => {
     copyText(shareUrl(), 'Ссылка на расчёт скопирована');
   });
+
+  $('#cta-telegram').addEventListener('click', (event) => {
+    event.preventDefault();
+    const text = 'Калькулятор трейд-апов CS2 с живыми ценами';
+    const url = `https://t.me/share/url?url=${encodeURIComponent(shareUrl())}&text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  });
 }
 
 /* -------------------------------------------------------------------------- */

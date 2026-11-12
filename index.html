@@ -26,7 +26,14 @@
     />
     <meta property="og:url" content="https://kolaars.github.io/tradeup-lab/" />
     <meta property="og:locale" content="ru_RU" />
+    <meta property="og:image" content="https://kolaars.github.io/tradeup-lab/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="TradeUp Lab — калькулятор трейд-апов CS2" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TradeUp Lab — калькулятор трейд-апов CS2" />
+    <meta name="twitter:description" content="Соберите контракт из 10 скинов: стоимость, EV, ROI и шанс на плюс." />
+    <meta name="twitter:image" content="https://kolaars.github.io/tradeup-lab/og.png" />
 
     <link rel="preload" href="data/items.json" as="fetch" crossorigin />
     <link rel="stylesheet" href="assets/styles.css" />
@@ -345,7 +352,10 @@
           <h2>Нашли интересный контракт?</h2>
           <p>Сохраните ссылку на расчёт и вернитесь к нему, когда цены обновятся.</p>
         </div>
-        <button class="btn btn-primary" id="cta-share" type="button">Скопировать ссылку на расчёт</button>
+        <div class="cta-actions">
+          <button class="btn btn-primary" id="cta-share" type="button">Скопировать ссылку на расчёт</button>
+          <a class="btn" id="cta-telegram" href="https://t.me/share/url" target="_blank" rel="noopener">Поделиться в Telegram</a>
+        </div>
       </section>
     </main>
 

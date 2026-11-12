@@ -1570,6 +1570,12 @@ input[type="search"]::-webkit-search-cancel-button {
   flex-wrap: wrap;
 }
 
+.cta-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .cta-band h2 {
   font-size: clamp(20px, 3vw, 26px);
   letter-spacing: -0.03em;
