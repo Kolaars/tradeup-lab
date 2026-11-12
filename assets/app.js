@@ -421,7 +421,7 @@ function renderSlots() {
       <div class="slot slot-filled" style="--rarity:${color}">
         <img src="${esc(item.i)}" alt="" loading="lazy" width="62" height="52">
         <div class="slot-main">
-          <div class="slot-name" title="${esc(item.n)}">${esc(item.n)}</div>
+          <div class="slot-name" title="${esc(item.n)}">${state.st ? 'StatTrak™ ' : ''}${esc(item.n)}</div>
           <div class="slot-controls">
             <select data-wear="${index}" aria-label="Степень износа">
               ${wearOptions}
@@ -580,7 +580,7 @@ function renderOutcomes(result) {
             <div class="oc-item">
               <img src="${esc(item.i)}" alt="" loading="lazy" width="42" height="32">
               <div>
-                <div class="oc-name" title="${esc(item.n)}">${esc(item.n)}</div>
+                <div class="oc-name" title="${esc(item.n)}">${state.st ? 'StatTrak™ ' : ''}${esc(item.n)}</div>
                 <div class="oc-sub">${esc(wear)} · ${esc(collectionName(item.c[0]))}</div>
               </div>
             </div>
@@ -693,7 +693,7 @@ function copyList() {
   const lines = state.slots.filter(Boolean).map((slot, index) => {
     const item = itemById(slot.id);
     const price = getPrice(item, slot.wear, state.mode, state.st) || 0;
-    return `${index + 1}. ${item.n} — ${wearLabel(slot.wear)} — ${money(price)}`;
+    return `${index + 1}. ${state.st ? 'StatTrak™ ' : ''}${item.n} — ${wearLabel(slot.wear)} — ${money(price)}`;
   });
   if (!lines.length) return;
   const result = computeCurrent();
